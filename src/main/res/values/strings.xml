@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Art Vancouver</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
+    <string name="login">Login</string>
+    <string name="account">No account yet?</string>
+    <string name="accountPrompt"><u>Create One</u></string>
 </resources>
