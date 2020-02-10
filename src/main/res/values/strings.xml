@@ -5,4 +5,9 @@
     <string name="login">Login</string>
     <string name="account">No account yet?</string>
     <string name="accountPrompt"><u>Create One</u></string>
+    <string name="title">Title: </string>
+    <string name="artist">Artist: </string>
+    <string name="owner">Owner: </string>
+    <string name="location">Location: </string>
+    <string name="description">Description: </string>
 </resources>
