@@ -114,7 +114,8 @@
                 android:layout_weight="1"
                 android:contextClickable="true"
                 android:text="@string/accountPrompt"
-                android:textColor="#3F51B5" />
+                android:textColor="#3F51B5"
+                android:onClick="onClickCreateAccount"/>
         </LinearLayout>
 
     </LinearLayout>

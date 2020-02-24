@@ -40,11 +40,13 @@
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/floatingActionButton"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_width="86dp"
+                    android:layout_height="83dp"
                     android:layout_weight="1"
                     android:clickable="true"
-                    app:srcCompat="@android:drawable/btn_dialog" />
+                    android:onClick="onClickCloseInfo"
+                    app:backgroundTint="#2DFF0000"
+                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
             </LinearLayout>
 
             <LinearLayout
@@ -125,7 +127,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="art location" />
+
             </LinearLayout>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"

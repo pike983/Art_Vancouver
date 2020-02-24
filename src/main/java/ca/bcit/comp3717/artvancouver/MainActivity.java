@@ -12,10 +12,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
     }
 
     public void onClickLogin(View view) {
         Intent i = new Intent(MainActivity.this, ArtInfoActivity.class);
+        startActivity(i);
+    }
+
+    public void onClickCreateAccount(View view) {
+        Intent i = new Intent(MainActivity.this, MapActivity.class);
         startActivity(i);
     }
 }

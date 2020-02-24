@@ -5,16 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class ArtInfoActivity extends AppCompatActivity {
+public class MapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_art_info);
+        setContentView(R.layout.activity_map);
         getSupportActionBar().hide();
     }
 
-    public void onClickCloseInfo(View v) {
+    public void onClickBack(View v) {
         finish();
     }
 }
