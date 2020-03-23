@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickLogin(View view) {
-        Intent i = new Intent(MainActivity.this, ArtInfoActivity.class);
+        Intent i = new Intent(MainActivity.this, MenuActivity.class);
         startActivity(i);
     }
 
     public void onClickCreateAccount(View view) {
-        Intent i = new Intent(MainActivity.this, MapsActivity.class);
+        Intent i = new Intent(MainActivity.this, ArtInfoActivity.class);
         startActivity(i);
     }
 }

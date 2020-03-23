@@ -3,7 +3,9 @@ package ca.bcit.comp3717.artvancouver;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Record {
+import java.io.Serializable;
+
+public class Record implements Serializable {
 
     @SerializedName("datasetid")
     @Expose

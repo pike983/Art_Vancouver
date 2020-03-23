@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Art Vancouver</string>
+    <string name="json_file_name">public-art.json</string>
     <string name="email">Email:</string>
     <string name="password">Password:</string>
     <string name="login">Login</string>
@@ -15,4 +16,10 @@
     <string name="zoomIn">+</string>
     <string name="zoomOut">-</string>
     <string name="current_location">Current Location</string>
+    <string name="status">Status</string>
+    <string name="type">Type</string>
+    <string name="neighbourhood">Neighbourhood</string>
+    <string name="installation_year">Installation Year</string>
+    <string name="ownership">Ownership</string>
+    <string name="searchButton">Search</string>
 </resources>
