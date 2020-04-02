@@ -3,7 +3,9 @@ package ca.bcit.comp3717.artvancouver;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Fields {
+import java.io.Serializable;
+
+public class Fields implements Serializable {
 
     @SerializedName("status")
     @Expose

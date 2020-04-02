@@ -22,4 +22,7 @@
     <string name="installation_year">Installation Year</string>
     <string name="ownership">Ownership</string>
     <string name="searchButton">Search</string>
+    <string name="discussArt">Discuss Art</string>
+    <string name="findArt">Find Art</string>
+    <string name="logOut">Log Out</string>
 </resources>
