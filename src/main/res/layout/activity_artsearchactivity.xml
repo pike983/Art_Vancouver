@@ -6,137 +6,126 @@
     android:layout_height="match_parent"
     tools:context=".artsearchactivity">
 
-    <Spinner
-        android:id="@+id/statusSpinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="109dp"
-        app:layout_constraintBottom_toBottomOf="@+id/typeSpinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/typeSpinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/neighbourhoodLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Spinner
-        android:id="@+id/neighbourhoodSpinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="41dp"
-        app:layout_constraintBottom_toTopOf="@+id/yearLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <Button
+                android:id="@+id/searchBackBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onSearchBackBtn"
+                android:text="@string/backBtn" />
 
-    <Spinner
-        android:id="@+id/yearSpinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="43dp"
-        app:layout_constraintBottom_toTopOf="@+id/ownershipLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:id="@+id/ownershipLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="21dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:text="@string/ownership" />
 
-    <Spinner
-        android:id="@+id/ownershipSpinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="168dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <Spinner
+                android:id="@+id/ownershipSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
-        android:text="@string/searchButton"
-        android:onClick="onSearchArt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:id="@+id/typeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="22dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:text="@string/type" />
 
-    <EditText
-        android:id="@+id/statusLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="21dp"
-        android:ems="10"
-        android:focusable="false"
-        android:inputType="textPersonName"
-        android:text="@string/status"
-        app:layout_constraintBottom_toBottomOf="@+id/statusSpinner"
-        app:layout_constraintStart_toStartOf="@+id/statusSpinner" />
+            <Spinner
+                android:id="@+id/typeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp" />
 
-    <EditText
-        android:id="@+id/typeLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="22dp"
-        android:ems="10"
-        android:focusable="false"
-        android:inputType="textPersonName"
-        android:text="@string/type"
-        app:layout_constraintBottom_toBottomOf="@+id/typeSpinner"
-        app:layout_constraintStart_toStartOf="@+id/typeSpinner" />
+            <EditText
+                android:id="@+id/statusLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="21dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:text="@string/status" />
 
-    <EditText
-        android:id="@+id/neighbourhoodLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginBottom="22dp"
-        android:ems="10"
-        android:focusable="false"
-        android:inputType="textPersonName"
-        android:text="@string/neighbourhood"
-        app:layout_constraintBottom_toBottomOf="@+id/neighbourhoodSpinner"
-        app:layout_constraintStart_toStartOf="@+id/neighbourhoodSpinner" />
+            <Spinner
+                android:id="@+id/statusSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp" />
 
-    <EditText
-        android:id="@+id/yearLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="22dp"
-        android:ems="10"
-        android:focusable="false"
-        android:inputType="textPersonName"
-        android:text="@string/installation_year"
-        app:layout_constraintBottom_toBottomOf="@+id/yearSpinner"
-        app:layout_constraintStart_toStartOf="@+id/yearSpinner" />
+            <EditText
+                android:id="@+id/yearLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="22dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:text="@string/installation_year" />
 
-    <EditText
-        android:id="@+id/ownershipLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="21dp"
-        android:ems="10"
-        android:focusable="false"
-        android:inputType="textPersonName"
-        android:text="@string/ownership"
-        app:layout_constraintBottom_toBottomOf="@+id/ownershipSpinner"
-        app:layout_constraintStart_toStartOf="@+id/ownershipSpinner" />
+            <Spinner
+                android:id="@+id/yearSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp" />
+
+            <EditText
+                android:id="@+id/neighbourhoodLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="22dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:text="@string/neighbourhood" />
+
+            <Spinner
+                android:id="@+id/neighbourhoodSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="41dp" />
+
+            <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginBottom="44dp"
+                android:onClick="onSearchArt"
+                android:text="@string/searchButton" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

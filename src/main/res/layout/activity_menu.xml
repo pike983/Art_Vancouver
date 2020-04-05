@@ -6,47 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
 
-    <Button
-        android:id="@+id/discussButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="151dp"
-        android:layout_marginEnd="151dp"
-        android:text="@string/discussArt"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/findButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="162dp"
-        android:onClick="onFindArt"
-        android:text="@string/findArt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/discussButton"
-        app:layout_constraintVertical_bias="0.107" />
+        <Button
+            android:id="@+id/discussButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onDiscussArt"
+            android:text="@string/discussArt" />
 
-    <Button
-        android:id="@+id/logoutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginEnd="162dp"
-        android:text="@string/logOut"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findButton"
-        app:layout_constraintVertical_bias="0.607" />
+        <Button
+            android:id="@+id/findButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onFindArt"
+            android:text="@string/findArt" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onLogOut"
+            android:text="@string/logOut" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

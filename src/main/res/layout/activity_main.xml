@@ -6,117 +6,96 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/appTitle"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="50dp"
-                android:text="@string/app_name"
-                android:textAlignment="center"
-                android:textSize="36sp" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/appTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:text="@string/app_name"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/usernameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:labelFor="@id/usernameEnterEDT"
+                    android:text="@string/username"
+                    android:textAlignment="textEnd" />
+
+                <EditText
+                    android:id="@+id/usernameEnterEDT"
+                    android:layout_width="137dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textAlignment="textStart" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/passwordTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:labelFor="@id/passwordEDT"
+                    android:text="@string/password"
+                    android:textAlignment="textEnd" />
+
+                <EditText
+                    android:id="@+id/passwordEDT"
+                    android:layout_width="137dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:textAlignment="textStart" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:onClick="onClickLogin"
+                android:text="@string/login" />
+
         </LinearLayout>
+    </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/emailTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/email"
-                android:textAlignment="textEnd" />
-
-            <EditText
-                android:id="@+id/emailEnterEDT"
-                android:layout_width="137dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="50dp"
-                android:layout_weight="1"
-                android:autofillHints=""
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:textAlignment="textStart" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="86dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/passwordTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/password"
-                android:textAlignment="textEnd" />
-
-            <EditText
-                android:id="@+id/passwordEDT"
-                android:layout_width="137dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="50dp"
-                android:layout_weight="1"
-                android:autofillHints=""
-                android:ems="10"
-                android:inputType="textPassword"
-                android:textAlignment="textStart" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/loginBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:text="@string/login"
-            android:onClick="onClickLogin"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="31dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/accountTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:text="@string/account"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:id="@+id/accountPromptTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contextClickable="true"
-                android:text="@string/accountPrompt"
-                android:textColor="#3F51B5"
-                android:onClick="onClickCreateAccount"/>
-        </LinearLayout>
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,6 +35,7 @@ public class artsearchactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artsearchactivity);
+        getSupportActionBar().hide();
         records = getRecordsData();
         statusSpinner = findViewById(R.id.statusSpinner);
         typeSpinner = findViewById(R.id.typeSpinner);
@@ -72,6 +73,7 @@ public class artsearchactivity extends AppCompatActivity {
     }
 
     public void onSearchArt(View view) {
+        passRecords.clear();
         String statusText = statusSpinner.getSelectedItem().toString();
 
         String typeText = typeSpinner.getSelectedItem().toString();
@@ -168,5 +170,9 @@ public class artsearchactivity extends AppCompatActivity {
         ArrayAdapter<String> adapter5 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, owners);
         adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ownershipSpinner.setAdapter(adapter5);
+    }
+
+    public void onSearchBackBtn(View view) {
+        finish();
     }
 }

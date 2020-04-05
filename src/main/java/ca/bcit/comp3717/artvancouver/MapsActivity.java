@@ -14,11 +14,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap mMap;
     ArrayList<Record> records;
@@ -48,7 +49,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.clear();
+
         boolean moved = false;
+        Marker currentMarker;
 
         if (records.isEmpty()) {
             Toast toast = Toast.makeText(this,
@@ -60,8 +64,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             if (!(record.getFields().getGeom() == null)) {
                 LatLng location = new LatLng(record.getFields().getGeom().getCoordinates().get(1),
                         record.getFields().getGeom().getCoordinates().get(0));
-                mMap.addMarker(
-                        new MarkerOptions().position(location).title(record.getFields().getSitename()));
+                currentMarker = mMap.addMarker(
+                        new MarkerOptions().position(location)
+                                .title(record.getFields().getSitename())
+                                .snippet("Click for more information."));
+                currentMarker.setTag(record);
+                mMap.setOnInfoWindowClickListener(this);
                 if (!moved) {
                     mMap.moveCamera(CameraUpdateFactory.zoomTo(15));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
@@ -69,6 +77,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         }
+    }
+
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        Toast.makeText(this, "Info window clicked",
+                Toast.LENGTH_SHORT).show();
+        Record markerRecord = (Record) marker.getTag();
+        Log.d("Pass Record", markerRecord.toString());
+        Intent intent = new Intent(this, ArtInfoActivity.class);
+        intent.putExtra("record", markerRecord);
+        startActivity(intent);
     }
 
     public void onZoom(View v) {
@@ -81,5 +100,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onClickBack(View v) {
         finish();
     }
-
 }

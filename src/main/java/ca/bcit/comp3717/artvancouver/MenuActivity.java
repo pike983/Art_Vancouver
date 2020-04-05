@@ -15,10 +15,20 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onDiscussArt(View view) {
+        Log.i("Info", "button pressed");
+        Intent intent = new Intent(this, ForumActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        getSupportActionBar().hide();
+    }
 
+    public void onLogOut(View view) {
+        finish();
     }
 }

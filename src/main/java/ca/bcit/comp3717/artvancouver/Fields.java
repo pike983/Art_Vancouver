@@ -28,6 +28,9 @@ public class Fields implements Serializable {
     @SerializedName("geom")
     @Expose
     private Geom geom;
+    @SerializedName("photocredits")
+    @Expose
+    private String photocredits;
     @SerializedName("primarymaterial")
     @Expose
     private String primarymaterial;
@@ -37,6 +40,9 @@ public class Fields implements Serializable {
     @SerializedName("artists")
     @Expose
     private String artists;
+    @SerializedName("siteaddress")
+    @Expose
+    private String siteaddress;
     @SerializedName("registryid")
     @Expose
     private Integer registryid;
@@ -109,6 +115,10 @@ public class Fields implements Serializable {
         this.geom = geom;
     }
 
+    public String getPhotocredits() {return photocredits;}
+
+    public void setPhotocredits(String photocredits) {this.photocredits = photocredits;}
+
     public String getPrimarymaterial() {
         return primarymaterial;
     }
@@ -132,6 +142,10 @@ public class Fields implements Serializable {
     public void setArtists(String artists) {
         this.artists = artists;
     }
+
+    public String getSiteAddress() {return siteaddress;}
+
+    public void setSiteaddress(String siteaddress) {this.siteaddress = siteaddress;}
 
     public Integer getRegistryid() {
         return registryid;

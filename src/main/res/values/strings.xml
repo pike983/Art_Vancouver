@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">Art Vancouver</string>
     <string name="json_file_name">public-art.json</string>
-    <string name="email">Email:</string>
+    <string name="username">Username:</string>
     <string name="password">Password:</string>
     <string name="login">Login</string>
     <string name="account">No account yet?</string>
     <string name="accountPrompt"><u>Create One</u></string>
-    <string name="title">Title: </string>
-    <string name="artist">Artist: </string>
+    <string name="photoCred">Photo Credits:</string>
+    <string name="address">Address: </string>
     <string name="owner">Owner: </string>
-    <string name="location">Location: </string>
+    <string name="neighbourhoodDesc">Neighbourhood: </string>
     <string name="description">Description: </string>
     <string name="backBtn">Back</string>
     <string name="title_activity_maps">Map</string>
@@ -25,4 +25,12 @@
     <string name="discussArt">Discuss Art</string>
     <string name="findArt">Find Art</string>
     <string name="logOut">Log Out</string>
+    <string name="noPhotoCredits">Unknown Photographer</string>
+    <string name="noOwner">Unknown Owner</string>
+    <string name="noStreetAddress">Exact Address Unknown</string>
+    <string name="noNeighbourhood">Neighbourhood Unknown</string>
+    <string name="noDescription">Description Not Provided</string>
+    <string name="addArt">Add Art</string>
+    <string name="forums">Forums</string>
+    <string name="sampleArt">Sample Art</string>
 </resources>

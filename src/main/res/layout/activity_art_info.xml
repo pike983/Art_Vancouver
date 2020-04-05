@@ -28,26 +28,42 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/artThumbnail"
                     android:layout_width="329dp"
                     android:layout_height="295dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    app:srcCompat="@color/colorAccent" />
+                    android:layout_marginBottom="10dp" />
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton"
-                    android:layout_width="86dp"
-                    android:layout_height="83dp"
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
                     android:layout_weight="1"
-                    android:clickable="true"
                     android:onClick="onClickCloseInfo"
-                    app:backgroundTint="#2DFF0000"
-                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/close_button" />
+
+                <!--                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                    android:id="@+id/floatingActionButton"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="83dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:clickable="true"-->
+<!--                    app:backgroundTint="#2DFF0000"-->
+<!--                    app:srcCompat="@drawable/close_button" />-->
+
             </LinearLayout>
+
+            <RatingBar
+                android:id="@+id/artRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:progressTint="#FFC107" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -55,43 +71,23 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/artTitleTxt"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/artPhotoCredTxt"
+                    android:layout_width="62dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/title" />
+                    android:text="@string/photoCred" />
 
                 <TextView
-                    android:id="@+id/artTitleDescTxt"
+                    android:id="@+id/artPhotoCredits"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="art title" />
+                    android:layout_weight="2"
+                    android:text="@string/noPhotoCredits" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/artArtistTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/artist" />
-
-                <TextView
-                    android:id="@+id/artArtistDescTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="art artist" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -102,11 +98,31 @@
                     android:text="@string/owner" />
 
                 <TextView
-                    android:id="@+id/artOwnerDescTxt"
+                    android:id="@+id/artOwner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/noOwner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/artAddressTxt"
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="art owner" />
+                    android:text="@string/address" />
+
+                <TextView
+                    android:id="@+id/artStreetAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/noStreetAddress" />
             </LinearLayout>
 
             <LinearLayout
@@ -115,27 +131,20 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/artLocationTxt"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/artNeighbourhoodTxt"
+                    android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/location" />
+                    android:text="@string/neighbourhoodDesc" />
 
                 <TextView
-                    android:id="@+id/artLocationDescTxt"
+                    android:id="@+id/artNeighbourhood"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="art location" />
+                    android:layout_weight="2"
+                    android:text="@string/noNeighbourhood" />
 
             </LinearLayout>
-
-            <RatingBar
-                android:id="@+id/ratingBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -144,28 +153,18 @@
 
                 <TextView
                     android:id="@+id/artDescriptionTxt"
-                    android:layout_width="wrap_content"
+                    android:layout_width="198dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/description" />
 
-                <ScrollView
-                    android:layout_width="276dp"
+                <TextView
+                    android:id="@+id/artDescription"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="2"
+                    android:text="@string/noDescription" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView11"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="art description example  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
-                    </LinearLayout>
-                </ScrollView>
             </LinearLayout>
 
         </LinearLayout>
